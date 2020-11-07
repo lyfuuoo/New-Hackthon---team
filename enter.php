@@ -2,7 +2,7 @@
 <html>  
 <head>  
     <meta charset="utf-8">  
-    <title>Processing系统处理中...</title>  
+    <title>Processing...</title>  
 </head>  
 <body>  
     <?php   
@@ -13,7 +13,7 @@
   
         $con=mysql_connect("localhost","sixbox","sixboxsixbox");  
         if (!$con) {  
-            die('连接失败'.$mysql_error());  
+            die('Connection faliure'.$mysql_error());  
         }  
         mysql_select_db("xdm447914479_db",$con);//use user_info���ݿ⣻  
         $dbmailnum=null;  
@@ -30,7 +30,7 @@
         if (is_null($dbmailnum)) {//�û��������ݿ��в�����ʱ����index.html����  
     ?>  
     <script type="text/javascript">  
-        alert("账号不存在或被限制登录！Account banned or not exist.(╥﹏╥)o");  
+        alert("Your account is banned or doesn't exist.(╥﹏╥)o");  
         window.location.href="../login-1.html";  
     </script>  
     <?php   
@@ -39,7 +39,7 @@
             if ($dbpassword!=$password){//����Ӧ���벻��ʱ����index.html����  
     ?>  
     <script type="text/javascript">  
-        alert("账号或密码错误，检查一下吧 Wrong password or e-mail");  
+        alert("Your password or e-mail is wrong, please check it.");  
         window.location.href="../login-1.html";  
     </script>  
     <?php   
